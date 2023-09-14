@@ -6,14 +6,14 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 16:36:02 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/08 16:51:20 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/14 17:20:42 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-int ft_strncmp(char *s1, char *s2, unsigned int n)
+int ft_strncmp(char *s1, char *s2, size_t n)
 {
     unsigned int    i;
 
@@ -33,7 +33,7 @@ int main(void)
 {
     char    s1[] = "It is what it isssss";
     char    s2[] = "It is what it issssssss";
-    unsigned int n;
+    size_t n;
 
     n = 30;
     printf ("%d", ft_strncmp(s1,s2,n));

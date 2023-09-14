@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
-static int	ft_isalnum	(int input)
+int	ft_isalnum	(int input)
 {
 	if ((input >= 48 && input <= 57) || (input >= 65 && input <= 90) || (input >= 97 && input <= 122))
 		return (1);

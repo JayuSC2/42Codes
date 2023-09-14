@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int	ft_isdigit	(int input)
+static int	ft_isdigit	(int input)
 {
 	if (input >= 48 && input <= 57)
 		return (1);

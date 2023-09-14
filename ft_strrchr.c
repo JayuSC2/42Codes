@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/05 14:12:37 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/07 10:55:23 by juitz            ###   ########.fr       */
+/*   Created: 2023/09/11 14:16:42 by juitz             #+#    #+#             */
+/*   Updated: 2023/09/11 16:33:00 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
+#include <unistd.h>
+#include <strin.h>
 
-int	ft_isalpha	(int input)
+int	ft_strlen	(char *str)
 {
-	if ((input >= 65 && input <= 90) || (input >= 97 && input <= 122))
-		return (1);
-	else
-		return (0);
-}
+	int	i;
 
-int	main(void)
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+char    *strrchr(const char *s, int c)
 {
-	printf ("%d", ft_isalpha('2'));
-	printf ("%d", ft_isalpha('/'));
-	printf ("%d", ft_isalpha('z'));
+    while (*str != '\0')   
 }
-
-
-	
-

@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 14:17:20 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/12 17:35:18 by juitz            ###   ########.fr       */
+/*   Created: 2023/09/13 12:49:21 by juitz             #+#    #+#             */
+/*   Updated: 2023/09/13 14:45:07 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-size_t strlcpy(char *dest, const char *src, size_t size)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-    unsigned int n;
+    char *str = (char *)s;
 
-    n = 0;
-    while (*(src + n) && (n < size - 1))
-        *dest++ = *(src + n++);
-    *dest = '\0';
-    while (*(src + n))
-    n++;
-        
-    return (n);
+    while (*str != '\0' && n > 0)
+    {
+        if (*str == c)
+            return ((void*)str);
+        str++;
+        n--;
+    }
+    return (NULL);
 }
 
 int main(void)
 {
-    char src[] = "Hello how is it going";
-    char dest[] = "How are you?";
+    const char *str = "Des wird scho";
+    size_t n  = 13;
+    
+    void *found = ft_memchr(str, 'b', n);
 
-    printf("%zu", strlcpy(dest, src, 10));
+    if (found != NULL)
+        printf("%s\n", (char *)found);
+    else
+        printf("Character not found.\n");
+    return (0);
 }

@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 14:17:20 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/12 17:35:18 by juitz            ###   ########.fr       */
+/*   Created: 2023/09/13 14:46:40 by juitz             #+#    #+#             */
+/*   Updated: 2023/09/13 15:55:37 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-size_t strlcpy(char *dest, const char *src, size_t size)
+int ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-    unsigned int n;
+    const char *s1 = (char *)str1;
+    const char *s2 = (char *)str2;
 
-    n = 0;
-    while (*(src + n) && (n < size - 1))
-        *dest++ = *(src + n++);
-    *dest = '\0';
-    while (*(src + n))
-    n++;
-        
-    return (n);
+    while ((*s1 || *s2 != '\0') && (n > 0))
+    {
+        if (*s1 != *s2)
+        {
+            return (*s1 - *s2);
+        }
+        s1++;
+        s2++;
+        n--;
+    }
+    return(0);
 }
-
 int main(void)
 {
-    char src[] = "Hello how is it going";
-    char dest[] = "How are you?";
+    const char *s1 = "Hello";
+    const char *s2 = "Heolo";
+    size_t n = 3;
 
-    printf("%zu", strlcpy(dest, src, 10));
+    printf ("%d", ft_memcmp(s1, s2, n));
 }

@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 17:49:11 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/11 13:26:30 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/11 16:42:43 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char *ft_strchr (const char *str, int c)
     while (*str != '\0')
     {
         if (*str == c)
-        return (str);
+        return ((char*)str);
         str++;
     }
     return (0);
@@ -26,11 +26,9 @@ char *ft_strchr (const char *str, int c)
 
 int main(void)
 {
-    char *str
-    char *first_w
-    
-    *str = "Des wird scho";
-    first_w = *ft_strchr(str, w)
+    const char *str = "Des wird scho";
+    char *first_w = ft_strchr(str, 'w');
 
-    printf ("first w: %s\n, first_w");
+    printf ("%s\n", first_w);
+    printf ("%d", first_w);
 }
