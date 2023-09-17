@@ -1,53 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   Untitled-1                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 17:48:45 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/13 12:43:45 by juitz            ###   ########.fr       */
+/*   Created: 2023/09/17 19:23:28 by marvin            #+#    #+#             */
+/*   Updated: 2023/09/17 19:23:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include <stdio.h>
-#include <stddef.h>
+#include <unistd.h>
 
-char *strnstr(const char *big, const char *little, size_t len)
+char 	*ft_strnstr (const char *big, const char *little, size_t len)
 {
-    const char *big_start = big;
-    const char *little_start = little;
-    
-    while (*big != '\0' && len > 0)
+    size_t  i;
+    size_t  j;
+
+    i = 0;
+    j = 0;
+
+    if (!big || !little)
+        return (NULL);
+    if (little[j] == '\0')
+        return ((char *) big);
+    while (big[i] != '\0' && little[j] != '\0' && i < len)
     {
-        while (*big != '\0' && *little != '\0' && *big == *little)
-        big++;
-        little++;
-        len--;
+        if (big[i] == little[0])
+            while (big[i + j] == little[j] && (i + j) < len)
+            {
+                if (little[j + 1] == '\0')
+                    return ((char *)big + i);
+                j++;
+            }
+        i++;
     }
-    if (*little == '\0')
-    {
-        return (char *)big_start;
-    }
-    
-        big = big_start + 1;
-        little = little_start;
-        len--;
     return (0);
 }
 
 int main(void)
 {
-    const char *big = "I'm gonna do this";
-    const char *little = "do this";
-    size_t  len = 16;
+    const char big [] = "San a poa Huankinda dabei";
+    const char little [] = "Huankinda";
+    size_t  len = 20;
 
-    printf ("%s\n", strnstr(big, little, len));
-    return (0);
+    printf("%s", ft_strnstr(big, little, len));
 }
-
- 
- 
-
- 
