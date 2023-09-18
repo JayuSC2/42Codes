@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memset.c                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 10:03:36 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/07 13:20:34 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/18 13:17:45 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-void	*ft_memset (void *s, int x, unsigned int len)
+void	*ft_memset (void *s, int x, size_t len)
 {
 	unsigned char *p;
 
@@ -36,7 +36,7 @@ void	printArray (char arr[], int n)
 		i++;
 	}
 }
-
+/*
 int	main(void)
 {
 	char arr[] = "Hello";
@@ -46,7 +46,7 @@ int	main(void)
 	printArray(arr, 5);
 	return (0);
 }
-
+*/
 	
 
 

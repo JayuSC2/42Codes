@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:12:37 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/07 10:55:23 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/18 13:19:15 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ int	ft_isalpha	(int input)
 	else
 		return (0);
 }
-
+/*
 int	main(void)
 {
 	printf ("%d", ft_isalpha('2'));
 	printf ("%d", ft_isalpha('/'));
 	printf ("%d", ft_isalpha('z'));
 }
-
+*/
 
 	
 

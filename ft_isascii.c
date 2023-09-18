@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:00:51 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/05 18:19:40 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/18 13:19:07 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ int	ft_isascii	(int input)
 	else
 		return (0);
 }
-
+/*
 int	main(void)
 {
-	printf ("%d", ft_isascii('ß'));
+	printf ("%d", ft_isascii('2'));
 }
+*/

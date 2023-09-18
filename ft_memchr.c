@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:49:21 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/13 14:45:07 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/18 13:18:34 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void *ft_memchr(const void *s, int c, size_t n)
     }
     return (NULL);
 }
-
+/*
 int main(void)
 {
     const char *str = "Des wird scho";
@@ -40,3 +40,4 @@ int main(void)
         printf("Character not found.\n");
     return (0);
 }
+*/

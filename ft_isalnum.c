@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 16:48:44 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/07 10:54:32 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/18 13:19:23 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_isalnum	(int input)
 	else
 		return (0);
 }
-
+/*
 int	main(void)
 {
 	printf ("%d", ft_isalnum(';'));
@@ -28,3 +28,4 @@ int	main(void)
 	printf ("%d", ft_isalnum('0'));
 	printf ("%d", ft_isalnum('A'));
 }
+*/

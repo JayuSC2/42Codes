@@ -3,27 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 10:54:40 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/17 20:28:28 by marvin           ###   ########.fr       */
+/*   Updated: 2023/09/18 17:48:18 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
+#include "libft.h"
 
 void    *ft_memmove(void *dest, const void *src, size_t len)
 {
     char *csrc = (char *)src;
     char *cdest = (char *)dest;
-    size_t i;
+    size_t i = 0;
 
-    i = 0;
+    if (cdest == NULL || csrc == NULL)
+        return (NULL);
     if (cdest > csrc)
     {
-        while (len-- > 0)
-            cdest[len] = csrc[len];
+        i = len;
+        while (i > 0)
+        {
+            cdest[i - 1] = csrc[i - 1];
+            i--;
+        }
     }
     while (i < len)
     {
@@ -32,14 +38,16 @@ void    *ft_memmove(void *dest, const void *src, size_t len)
     }
     return(dest);
 }
+/*
 int main(void)
 {
-    unsigned int    n;
-    char csrc[] = "What am I doing even?";
-    char cdest[] = "Does this have to be bigger?";
+    size_t    len;
+    char csrc[] = "Aiiiiiiight";
+    char cdest[] = "We got this";
 
-    n = 28;
-    ft_memmove (cdest, csrc, 28);
+    len = 30;
+    ft_memmove (cdest, csrc, len);
     printf ("%s", cdest);
     return (0);
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:46:40 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/13 15:55:37 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/18 13:18:17 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int ft_memcmp(const void *str1, const void *str2, size_t n)
     }
     return(0);
 }
+/*
 int main(void)
 {
     const char *s1 = "Hello";
@@ -38,3 +39,4 @@ int main(void)
 
     printf ("%d", ft_memcmp(s1, s2, n));
 }
+*/

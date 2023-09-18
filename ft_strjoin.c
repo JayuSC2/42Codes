@@ -1,53 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 14:16:42 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/18 13:16:22 by juitz            ###   ########.fr       */
+/*   Created: 2023/09/18 12:56:15 by juitz             #+#    #+#             */
+/*   Updated: 2023/09/18 17:02:14 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
-#include <string.h>
+#include <stddef.h>
 #include "libft.h"
 
-char    *ft_strrchr(const char *s, int c)
+char    *ft_strjoin(char const *s1, char const *s2)
 {
-    int	i;
+    char *new;
+    size_t  len;
 
-	i = ft_strlen(s);
-	while (i > 0)
-	{
-		if (s[i] == (char) c)
-			return ((char *)s + i);
-		i--;
-	}
-	return (0);
-}
-/*
-int	main(void)
-{
-	 const char s[] = "Servus wie gehts";
-    int c = 'l';
+    if (!s1 || !s2)
+        return(NULL);
+    len = ft_strlen(s1) + ft_strlen(s2);
 
-    char *result = ft_strrchr(s, c);
-    if (result != NULL)
-    {
-        printf("%s", result);
-    }
-    else
-    {
-        printf("Character not found");
-    }
-	return 0;
-}
-*/
-
-
-
-
+    new = (char *)malloc(sizeof(char) * (len + 1));
+    if (!new)
+        return (NULL);
+    
 

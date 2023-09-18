@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juitz <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:26:35 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/05 18:33:05 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/18 13:18:47 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,11 @@ int	ft_isprint	(int input)
 	else
 		return (0);
 }
-
+/*
 int	main(void)
 {
 	printf ("%d", ft_isprint('/'));
 	printf ("%d", ft_isprint('a'));
 	printf ("%d", ft_isprint('0'));
 }
+*/

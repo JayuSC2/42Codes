@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 16:36:02 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/14 17:20:42 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/18 13:16:37 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int ft_strncmp(char *s1, char *s2, size_t n)
     }
     return (0);
 }
-
+/*
 int main(void)
 {
     char    s1[] = "It is what it isssss";
@@ -38,3 +38,4 @@ int main(void)
     n = 30;
     printf ("%d", ft_strncmp(s1,s2,n));
 }
+*/

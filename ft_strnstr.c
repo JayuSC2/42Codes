@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Untitled-1                                         :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/17 19:23:28 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/17 19:23:28 by marvin           ###   ########.fr       */
+/*   Created: 2023/09/18 10:31:02 by juitz             #+#    #+#             */
+/*   Updated: 2023/09/18 10:31:02 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
+#include "libft.h"
 
 char 	*ft_strnstr (const char *big, const char *little, size_t len)
 {
@@ -38,7 +39,7 @@ char 	*ft_strnstr (const char *big, const char *little, size_t len)
     }
     return (0);
 }
-
+/*
 int main(void)
 {
     const char big [] = "San a poa Huankinda dabei";
@@ -47,3 +48,4 @@ int main(void)
 
     printf("%s", ft_strnstr(big, little, len));
 }
+*/

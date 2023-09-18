@@ -1,53 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 14:16:42 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/18 13:16:22 by juitz            ###   ########.fr       */
+/*   Created: 2023/09/15 18:14:08 by juitz             #+#    #+#             */
+/*   Updated: 2023/09/18 13:17:18 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
-#include <string.h>
 #include "libft.h"
 
-char    *ft_strrchr(const char *s, int c)
+char *ft_strdup(const char *s)
 {
-    int	i;
+    char *new;
+    int i;
+    int len;
 
-	i = ft_strlen(s);
-	while (i > 0)
-	{
-		if (s[i] == (char) c)
-			return ((char *)s + i);
-		i--;
-	}
-	return (0);
+    len = 0;
+    while (s[len] != '\0')
+        len++;
+    if (!(new = malloc(sizeof(char) * (len + 1))))
+        return (NULL);
+    
+    i = 0;
+    while (i < len)
+    {
+        new[i] = s[i];
+    i++;
+    }
+    new[i] = '\0';
+    return (new);
 }
 /*
-int	main(void)
+int main(void)
 {
-	 const char s[] = "Servus wie gehts";
-    int c = 'l';
+    const char s [] = "Hello";
 
-    char *result = ft_strrchr(s, c);
-    if (result != NULL)
-    {
-        printf("%s", result);
-    }
-    else
-    {
-        printf("Character not found");
-    }
-	return 0;
+    printf("%s",ft_strdup(s));
 }
 */
-
-
-
-
-

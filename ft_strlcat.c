@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 16:33:10 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/14 19:30:14 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/18 13:17:07 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t    ft_strlcat(char *dst, const char *src, size_t dstsize)
     dst[i] = '\0';
     return (i + ft_strlen(src));
 }
-
+/*
 int main(void)
 {
     const char src[] = "How is it";
@@ -42,3 +42,4 @@ int main(void)
 
     printf("%ld", ft_strlcat(dst, src, dstsize));
 }
+*/

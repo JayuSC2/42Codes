@@ -21,7 +21,7 @@ void	ft_bzero(void *s, size_t n)
 	while (n-- > 0)
 		*ptr++ = 0;
 }
-
+/*
 int	main(void)
 {
 	char	arr[] = "Hello";
@@ -30,4 +30,4 @@ int	main(void)
 	ft_bzero(arr, 5);
 	printf ("%s\n", arr);
 	return (0);
-}
+}*/

@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:02:50 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/15 17:49:55 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/18 18:09:32 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,19 @@ void    *ft_calloc(size_t nitems, size_t size)
 {
     void    *ptr;
 
+    if (nitems == 0 || size == 0)
+    {
+        nitems = 1;
+        size = 1;
+    }
+
     ptr = (void *)malloc(nitems * size);
     if (!ptr)
         return (NULL);
-    ft_bzero(ptr, nitems);
+    ft_bzero(ptr, size * nitems);
     return (ptr);
 }
-
+/*
 int main(void)
 {
     size_t nitems = 5;
@@ -46,3 +52,4 @@ int main(void)
     free(array);
     return (0);
 }
+*/
