@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 14:21:15 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/18 18:19:32 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/19 15:17:51 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy (void *dest, const void *src, size_t n)
 	unsigned int i;
 
 	i = 0;
+	if (dest == NULL && src == NULL)
+        return NULL;
 	while (i < n)
 	{
 		cdest[i] = csrc[i];

@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 17:49:11 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/18 13:17:30 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/19 19:29:49 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@ char *ft_strchr (const char *str, int c)
 {
     while (*str != '\0')
     {
-        if (*str == c)
-        return ((char*)str);
+        if (*str == (unsigned char)c)
+            return ((char*)str);
         str++;
     }
+    if (c == '\0')
+        return ((char*)str);
     return (0);
 }
-/*
+
 int main(void)
 {
     const char *str = "Des wird scho";
@@ -31,4 +33,3 @@ int main(void)
 
     printf ("%s\n", first_w);
 }
-*/

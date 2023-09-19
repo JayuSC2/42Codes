@@ -22,7 +22,7 @@ char 	*ft_strnstr (const char *big, const char *little, size_t len)
     i = 0;
     j = 0;
 
-    if (!big || !little)
+    if (big == 0 && little == 0)
         return (NULL);
     if (little[j] == '\0')
         return ((char *) big);

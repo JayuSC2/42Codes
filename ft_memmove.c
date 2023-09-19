@@ -6,46 +6,43 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 10:54:40 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/18 17:48:18 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/19 15:33:21 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 #include "libft.h"
+#include <stddef.h>
 
 void    *ft_memmove(void *dest, const void *src, size_t len)
 {
     char *csrc = (char *)src;
     char *cdest = (char *)dest;
-    size_t i = 0;
 
-    if (cdest == NULL || csrc == NULL)
+    if (cdest == NULL && csrc == NULL)
         return (NULL);
-    if (cdest > csrc)
+    if (cdest > csrc && cdest < csrc + len)
     {
-        i = len;
-        while (i > 0)
+        while (len >= 1)
         {
-            cdest[i - 1] = csrc[i - 1];
-            i--;
+            cdest[len - 1] = csrc[len - 1];
+            len--;
         }
     }
-    while (i < len)
+    else
     {
-        cdest[i] = csrc[i];
-        i++;
+      ft_memcpy(dest, src, len);
     }
     return(dest);
 }
 /*
 int main(void)
 {
-    size_t    len;
-    char csrc[] = "Aiiiiiiight";
+    size_t    len = 30;
+    char csrc[] = "Aight";
     char cdest[] = "We got this";
 
-    len = 30;
     ft_memmove (cdest, csrc, len);
     printf ("%s", cdest);
     return (0);

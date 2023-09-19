@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:49:21 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/18 13:18:34 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/19 17:08:25 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
-    char *str = (char *)s;
+    const unsigned char *str;
+    
+    str = (const unsigned char *)s;
 
-    while (*str != '\0' && n > 0)
+    while (n > 0)
     {
-        if (*str == c)
+        if (*str == (unsigned char)c)
             return ((void*)str);
         str++;
         n--;
@@ -32,7 +34,7 @@ int main(void)
     const char *str = "Des wird scho";
     size_t n  = 13;
     
-    void *found = ft_memchr(str, 'b', n);
+    void *found = ft_memchr(str, 's', n);
 
     if (found != NULL)
         printf("%s\n", (char *)found);

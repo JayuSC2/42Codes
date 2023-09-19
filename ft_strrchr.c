@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:16:42 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/18 13:16:22 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/19 13:06:20 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ char    *ft_strrchr(const char *s, int c)
     int	i;
 
 	i = ft_strlen(s);
-	while (i > 0)
+	while (i >= 0)
 	{
 		if (s[i] == (char) c)
 			return ((char *)s + i);
+        if (i == 0)
+            break;
 		i--;
 	}
 	return (0);

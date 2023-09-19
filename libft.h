@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:57:28 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/18 12:38:46 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/19 20:05:03 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 #ifndef LIBFT_H
 #define LIBFT_H
 
+void    ft_putendl_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 void	ft_bzero(void *s, size_t n);
 void    *ft_calloc(size_t nitems, size_t size);
 int	ft_isalnum(int input);

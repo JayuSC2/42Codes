@@ -24,7 +24,10 @@ ft_strncmp.c\
 ft_strdup.c\
 *ft_strnstr.c\
 *ft_substr.c\
-ft_calloc.c
+ft_calloc.c\
+ft_putchar_fd.c\
+ft_putstr_fd.c\
+ft_putendl_fd
 
 OBJ = $(SRC:.c=.o)
 
