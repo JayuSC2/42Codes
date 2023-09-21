@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 18:17:01 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 17:53:58 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/21 17:57:00 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (ft_strchr(set, s1[start] && s1[start] <= end))
 		start++;
 	if (start > end)
-		ft_strdup(s1 + end + 1);
+		return (ft_strdup(s1 + end + 1));
 	while (ft_strchr(set, s1[end] && end >= 0))
 		end--;
 	trim = malloc(end - start + 2);
