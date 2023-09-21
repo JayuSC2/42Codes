@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 16:53:33 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 12:24:40 by juitz            ###   ########.fr       */
+/*   Created: 2023/09/20 12:41:24 by juitz             #+#    #+#             */
+/*   Updated: 2023/09/21 14:24:06 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
+#include "libft.h"
 
-int	ft_toupper(int c)
+char	*ft_itoa(int n)
 {
-	if (c >= 97 && c <= 122)
-		c = (c - 32);
-	return (c);
+    
 }
-/*
-int main(void)
-{
-int c = 'k';
-
-printf ("%c", ft_toupper(c));
-}
-*/

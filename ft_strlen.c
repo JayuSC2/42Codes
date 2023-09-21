@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:34:22 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/18 13:21:34 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/21 12:44:15 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "libft.h"
 #include <stddef.h>
 
-size_t	ft_strlen	(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
@@ -32,5 +32,3 @@ int	main(void)
 	printf ("%ld", ft_strlen(str));
 }
 */
-
-

@@ -6,14 +6,14 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 16:01:22 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/18 13:20:30 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/21 12:27:59 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int	ft_isdigit	(int input)
+int	ft_isdigit(int input)
 {
 	if (input >= 48 && input <= 57)
 		return (1);

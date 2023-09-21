@@ -6,19 +6,32 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 16:48:44 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/18 13:19:23 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/21 15:12:46 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int	ft_isalnum	(int input)
+static int is_digit(int num)
 {
-	if ((input >= 48 && input <= 57) || (input >= 65 && input <= 90) || (input >= 97 && input <= 122))
+	if (num >= 48 && num <= 57)
 		return (1);
 	else
 		return (0);
+}
+
+static int	is_alpha(int ch)
+{
+	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+		return (1);
+	else
+		return (0);
+}
+
+int	ft_isalnum(int input)
+{
+	return (is_digit(input) || is_alpha(input));
 }
 /*
 int	main(void)

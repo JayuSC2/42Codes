@@ -6,15 +6,15 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 19:46:03 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/19 19:58:56 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/21 11:57:27 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "libft.h"
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    if (s != 0)
-        write (fd, s, ft_strlen(s));
+	if (s != 0)
+		write (fd, s, ft_strlen(s));
 }

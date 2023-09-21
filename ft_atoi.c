@@ -1,29 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/08 16:53:33 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 12:24:40 by juitz            ###   ########.fr       */
+/*   Created: 2023/09/20 10:40:33 by juitz             #+#    #+#             */
+/*   Updated: 2023/09/21 10:24:52 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
+#include "libft.h"
 
-int	ft_toupper(int c)
+int	ft_atoi(const char *str)
 {
-	if (c >= 97 && c <= 122)
-		c = (c - 32);
-	return (c);
+	int	i;
+	int	num;
+	int	sign;
+
+	i = 0;
+	num = 0;
+	sign = 1;
+	while ((str[i] >= 9 && str[i] < 13) || str[i] == 32)
+		i++;
+	while (str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
+	}
+	while ((str[i] >= '0' && str[i] <= '9'))
+	{
+		num *= 10;
+		num += str[i] - '0';
+		i++;
+	}
+	return (num * sign);
 }
 /*
-int main(void)
+int	main (void)
 {
-int c = 'k';
+    char	str[] = " \t\v\n\r\f123";
 
-printf ("%c", ft_toupper(c));
+    printf("%d", ft_atoi(str));
 }
 */

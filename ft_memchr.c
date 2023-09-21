@@ -6,40 +6,39 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 12:49:21 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/19 17:08:25 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/21 12:38:07 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    const unsigned char *str;
-    
-    str = (const unsigned char *)s;
+	const unsigned char	*str;
 
-    while (n > 0)
-    {
-        if (*str == (unsigned char)c)
-            return ((void*)str);
-        str++;
-        n--;
-    }
-    return (NULL);
+	str = (const unsigned char *)s;
+	while (n > 0)
+	{
+		if (*str == (unsigned char)c)
+			return ((void *)str);
+		str++;
+		n--;
+	}
+	return (NULL);
 }
 /*
 int main(void)
 {
-    const char *str = "Des wird scho";
-    size_t n  = 13;
-    
-    void *found = ft_memchr(str, 's', n);
+	const char *str = "Des wird scho";
+	size_t n  = 13;
+	
+	void *found = ft_memchr(str, 's', n);
 
-    if (found != NULL)
-        printf("%s\n", (char *)found);
-    else
-        printf("Character not found.\n");
-    return (0);
+	if (found != NULL)
+		printf("%s\n", (char *)found);
+	else
+		printf("Character not found.\n");
+	return (0);
 }
 */

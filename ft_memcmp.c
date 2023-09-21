@@ -6,37 +6,39 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:46:40 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/19 12:52:40 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/21 10:34:53 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-int ft_memcmp(const void *str1, const void *str2, size_t n)
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-    const unsigned char *s1 = (unsigned char *)str1;
-    const unsigned char *s2 = (unsigned char *)str2;
+	const unsigned char	*s1;
+	const unsigned char	*s2;
 
-    while (n > 0)
-    {
-        if (*s1 != *s2)
-        {
-            return (*s1 - *s2);
-        }
-        s1++;
-        s2++;
-        n--;
-    }
-    return(0);
+	s1 = (unsigned char *)str1;
+	s2 = (unsigned char *)str2;
+	while (n > 0)
+	{
+		if (*s1 != *s2)
+		{
+			return (*s1 - *s2);
+		}
+		s1++;
+		s2++;
+		n--;
+	}
+	return (0);
 }
 /*
-int main(void)
+int	main(void)
 {
-    const char *s1 = "Hello";
-    const char *s2 = "Heolo";
-    size_t n = 3;
+	const char *s1 = "Hello";
+	const char *s2 = "Heolo";
+	size_t n = 3;
 
-    printf ("%d", ft_memcmp(s1, s2, n));
+	printf ("%d", ft_memcmp(s1, s2, n));
 }
 */
