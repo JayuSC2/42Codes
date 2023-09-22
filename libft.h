@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 13:57:28 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 12:41:49 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/22 14:19:59 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ char	*ft_substr(char const *str, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strmapi(char const *str, char (*f)(unsigned int, char));
 void	ft_striteri(char *str, void (*f)(unsigned int, char*));
+char	*ft_itoa(int len);
+char	**ft_split(char const *s, char c);
 
 #endif

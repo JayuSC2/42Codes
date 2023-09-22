@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 18:17:01 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/22 08:31:26 by marvin           ###   ########.fr       */
+/*   Updated: 2023/09/22 12:17:56 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1) - 1;
 	if (!s1 || !set)
 		return (0);
-	while (ft_strchr(set, s1[start] && start <= end))
+	while (ft_strchr(set, s1[start]) && start <= end)
 		start++;
-	if (start > end)
+	if (start >= end)
 		return (ft_strdup(s1 + end + 1));
-	while (ft_strchr(set, s1[end] && end >= 0))
+	while (ft_strchr(set, s1[end]) && end >= 0)
 		end--;
 	trim = malloc(end - start + 2);
 	if (!trim)
@@ -36,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy (trim, &s1[start], end - start + 2);
 	return (trim);
 }
-
+/*
 int	main(void)
 {
 	char const *s1 = "    HELLO   ";
@@ -44,3 +44,4 @@ int	main(void)
 
 	printf ("%s", ft_strtrim(s1, set));
 }
+*/

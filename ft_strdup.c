@@ -6,7 +6,7 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 18:14:08 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 17:44:42 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/22 16:37:02 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strdup(const char *s)
 	while (s[len] != '\0')
 		len++;
 	new = malloc(sizeof(char) * (len + 1));
-		if (!new)
+	if (!new)
 		return (NULL);
 	i = 0;
 	while (i < len)
