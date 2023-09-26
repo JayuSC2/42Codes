@@ -6,12 +6,12 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 13:23:10 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 10:24:59 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 13:07:05 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
+#include <stddef.h>
 
 void	ft_bzero(void *s, size_t n)
 {

@@ -6,12 +6,13 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 16:22:56 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 12:19:33 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 14:42:45 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stddef.h>
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {

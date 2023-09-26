@@ -6,13 +6,13 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 18:17:01 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/22 12:17:56 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 14:43:38 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-#include <stdio.h>
+#include <stddef.h>
+#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

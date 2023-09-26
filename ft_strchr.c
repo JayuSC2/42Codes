@@ -6,12 +6,11 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 17:49:11 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 11:59:06 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 14:21:38 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
@@ -21,9 +20,9 @@ char	*ft_strchr(const char *str, int c)
 			return ((char *)str);
 		str++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)str);
-	return (0);
+	return (NULL);
 }
 /*
 int	main(void)

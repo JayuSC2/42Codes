@@ -6,14 +6,13 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 16:48:44 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 15:12:46 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 14:29:33 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
-static int is_digit(int num)
+static int	is_digit(int num)
 {
 	if (num >= 48 && num <= 57)
 		return (1);

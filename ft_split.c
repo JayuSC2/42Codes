@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Untitled-1                                         :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/24 20:18:04 by marvin            #+#    #+#             */
-/*   Updated: 2023/09/24 20:18:04 by marvin           ###   ########.fr       */
+/*   Created: 2023/09/25 13:18:06 by juitz             #+#    #+#             */
+/*   Updated: 2023/09/25 13:18:06 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
+#include <stdlib.h>
 
 static size_t	ft_countword(char const *s, char c)
 {
@@ -31,17 +33,26 @@ static size_t	ft_countword(char const *s, char c)
 	return (count);
 }
 
-static void	ft_free(char **s)
+static size_t	get_word_len(const char *s, char c)
 {
-	int	j;
+	if (!ft_strchr(s, c))
+		return (ft_strlen(s));
+	else
+		return ((size_t)(ft_strchr(s, c) - s));
+}
 
-	j = 0;
-	while (s[j])
+static char	**ft_free(char **s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		free(s[j]);
-		j++;
+		free(s[i]);
+		i++;
 	}
 	free(s);
+	return (s);
 }
 
 char	**ft_split(char const *s, char c)
@@ -51,8 +62,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 
 	split_strings = (char **)malloc((ft_countword(s, c) + 1) * sizeof(char *));
-	if (!s || !split_strings)
-		return (0);
+	if (!split_strings)
+		return (NULL);
 	i = 0;
 	while (*s)
 	{
@@ -60,23 +71,37 @@ char	**ft_split(char const *s, char c)
 			s++;
 		if (*s)
 		{
-			if (!ft_strchr(s, c))
-				word_len = ft_strlen(s);
-			else
-				word_len = ft_strchr(s, c) - s;
-			split_strings[i++] = ft_substr(s, 0, word_len);
+			word_len = get_word_len(s, c);
+			split_strings[i] = ft_substr(s, 0, word_len);
+			if (!(split_strings[i++]))
+				return (ft_free(split_strings), NULL);
 			s += word_len;
 		}
 	}
 	split_strings[i] = NULL;
 	return (split_strings);
 }
-/*
-int main(void)
+/*int main(void)
 {
-    char str [] = "Hello, how are you";
-    char    c = ' ';
+    char const *input = "This,is,a,test,string";
+    char **result = ft_split(input, ',');
+    
+    if (result)
+    {
+        int i = 0;
+        while (result[i] != NULL)
+        {
+            printf("Token %d: %s\n", i, result[i]);
+            free(result[i]);
+            i++;
+        }
 
-    printf("%s", ft_split(str, ','));
-}
-*/
+        free(result);
+    }
+    else
+    {
+        printf("ft_split returned NULL\n");
+    }
+
+    return 0;
+}*/

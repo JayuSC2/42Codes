@@ -6,12 +6,12 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 17:22:06 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 12:23:35 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 14:28:08 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include <stddef.h>
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

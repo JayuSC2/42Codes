@@ -6,12 +6,10 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 18:34:22 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 12:44:15 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 14:24:28 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
 #include "libft.h"
 #include <stddef.h>
 

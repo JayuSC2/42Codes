@@ -6,12 +6,12 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 14:21:15 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 10:37:49 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 13:01:13 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

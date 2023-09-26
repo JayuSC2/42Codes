@@ -6,12 +6,12 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 16:36:02 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 12:43:56 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 14:25:13 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include <stddef.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

@@ -6,12 +6,12 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 14:17:20 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 12:18:37 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 14:24:15 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

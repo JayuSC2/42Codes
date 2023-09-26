@@ -6,12 +6,10 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 10:40:33 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/22 12:46:00 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 12:55:53 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
 #include "libft.h"
 
 int	ft_atoi(const char *str)

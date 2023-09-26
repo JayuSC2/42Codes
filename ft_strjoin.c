@@ -6,14 +6,13 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 12:56:15 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 12:07:59 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 14:43:59 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
 #include <stddef.h>
 #include "libft.h"
+#include <stdlib.h>
 
 static void	*ft_strncpy(char *dest, const char *src, unsigned int n)
 {

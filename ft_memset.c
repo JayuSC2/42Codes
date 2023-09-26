@@ -6,12 +6,11 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 10:03:36 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 10:48:07 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 13:10:20 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include <stddef.h>
 
 void	*ft_memset(void *s, int x, size_t len)
 {
@@ -23,18 +22,6 @@ void	*ft_memset(void *s, int x, size_t len)
 		*p++ = (unsigned char)x;
 	}
 	return (s);
-}
-
-void	printarray(char arr[], int n)
-{
-	int	i;
-
-	i = 0;
-	while ((arr[i] != '\0') && (i < n))
-	{
-		printf ("%c\n", arr[i]);
-		i++;
-	}
 }
 /*
 int	main(void)

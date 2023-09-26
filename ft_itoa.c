@@ -6,35 +6,36 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:41:24 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/22 16:30:36 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 14:44:25 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-#include <stdio.h>
+#include <stddef.h>
+#include <stdlib.h>
 
 static int	digit_count(int len)
 {
 	size_t	i;
-	int		temp_len;
 
-	temp_len = len;
 	i = 1;
-	while (temp_len /= 10)
+	while (len / 10)
+	{
+		len /= 10;
 		i++;
+	}
 	return (i);
 }
 
-char	*ft_itoa(int len)
+char	*ft_itoa(int n)
 {
 	char	*str_nb;
 	long	num;
 	size_t	digits;
 
-	num = len;
-	digits = digit_count(len);
-	if (len < 0)
+	num = n;
+	digits = digit_count(n);
+	if (n < 0)
 	{
 		num *= -1;
 		digits++;
@@ -48,7 +49,7 @@ char	*ft_itoa(int len)
 		*(str_nb + digits) = num % 10 + '0';
 		num /= 10;
 	}
-	if (len < 0)
+	if (n < 0)
 		*(str_nb + 0) = '-';
 	return (str_nb);
 }

@@ -6,13 +6,11 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:16:42 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/21 12:39:44 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 14:26:12 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
+#include <stddef.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)

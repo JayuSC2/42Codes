@@ -6,13 +6,12 @@
 /*   By: juitz <juitz@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 16:02:50 by juitz             #+#    #+#             */
-/*   Updated: 2023/09/22 15:49:56 by juitz            ###   ########.fr       */
+/*   Updated: 2023/09/26 14:47:48 by juitz            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
 #include "libft.h"
+#include <stddef.h>
 #include <stdlib.h>
 
 void	*ft_calloc(size_t nitems, size_t size)
